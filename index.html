@@ -30,14 +30,263 @@
       </div>
       <div class="flex items-center gap-3">
         <div
-          class="flex bg-secondary p-3 rounded-full items-center gap-2 text-xl font-bold"
+          class="flex bg-secondary px-4 py-3 rounded-full items-center gap-2 text-xl font-bold"
         >
-          <img src="./assets/checkbox.svg" alt="" />23
+          <img class="w-6" src="./assets/checkbox.svg" alt="" />23
         </div>
         <div class="bg-secondary p-3 rounded-full">
-          <img src="./assets/theme-btn.svg" alt="" />
+          <img class="w-8" src="./assets/theme-btn.svg" alt="" />
         </div>
       </div>
     </header>
+    <main class="grid grid-cols-1 md:grid-cols-7 gap-5 mt-5">
+      <section class="col-span-5 bg-primary p-5 rounded-lg">
+        <!-- Task Look -->
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-5">
+          <div
+            class="col-span-2 bg-secondary p-5 rounded-lg flex items-center gap-5"
+          >
+            <div class="bg-primary size-16 p-4 rounded-full flex items-center">
+              <img src="./assets/checkbox.svg" alt="" />
+            </div>
+            <div>
+              <p class="text-sm">Task Assigned</p>
+              <h4 class="text-4xl font-bold">05</h4>
+            </div>
+          </div>
+
+          <div
+            class="col-span-4 bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] p-5 rounded-lg flex items-center gap-5"
+          >
+            <img src="./assets/board.svg" alt="" />
+            <h3 class="text-2xl text-primary">
+              Discover Something<br />
+              New Today!
+            </h3>
+          </div>
+
+          <div
+            class="col-span-2 bg-secondary p-5 rounded-lg flex items-center gap-5"
+          >
+            <div class="bg-primary size-16 p-4 rounded-full flex items-center">
+              <img src="./assets/calender.svg" alt="" />
+            </div>
+            <div>
+              <h5>Wed</h5>
+              <h4 class="font-bold">Jul 28 2025</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="my-8 border-b border-[#3752FD]/20 border-dashed"></div>
+
+        <!-- Task List -->
+        <div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+            <!-- Task Card -->
+
+            <!-- ShopEase -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
+                ShopEase
+              </h4>
+              <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- CloudSync -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
+                CloudSync
+              </h4>
+              <h3 class="text-xl mb-3">Add Dark Mode</h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- SwiftPay -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
+                SwiftPay
+              </h4>
+              <h3 class="text-xl mb-3">Optimize Home page </h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- Meta -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">Meta</h4>
+              <h3 class="text-xl mb-3">Add new emoji 🤲</h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- Google LLC -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
+                Google LLC
+              </h4>
+              <h3 class="text-xl mb-3">Integrate OpenAI API</h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- Glassdoar -->
+            <div class="bg-secondary p-5 rounded-lg task-card">
+              <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
+                Glassdoar
+              </h4>
+              <h3 class="text-xl mb-3">Improve Job searching</h3>
+              <div
+                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
+              >
+                <p
+                  class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works properly and ensure onClick works
+                  properly
+                </p>
+              </div>
+              <div
+                class="my-2 border-b border-[#3752FD]/20 border-dashed"
+              ></div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <h5 class="text-base text-tertiary/80">Deadline</h5>
+                  <h4 class="font-semibold">21 March 2025</h4>
+                </div>
+                <button
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-span-2 bg-primary p-5 rounded-lg"></section>
+    </main>
+
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
