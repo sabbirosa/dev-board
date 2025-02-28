@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Board</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
@@ -20,10 +20,12 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="primary-font text-tertiary bg-red-100 p-4">
+  <body
+    class="primary-font text-tertiary bg-secondary p-6 px-10 lg:max-w-9xl lg:mx-auto"
+  >
     <header class="flex justify-between items-center p-5 bg-primary rounded-lg">
       <div class="flex items-center gap-3">
-        <img src="./assets/logo.png" alt="Site Icon" />
+        <img src="./assets/logo.svg" alt="Site Icon" />
         <h1 class="hidden md:block text-4xl font-light">
           Dev<span class="font-bold">Board</span>
         </h1>
@@ -32,9 +34,14 @@
         <div
           class="flex bg-secondary px-4 py-3 rounded-full items-center gap-2 text-xl font-bold"
         >
-          <img class="w-6" src="./assets/checkbox.svg" alt="" />23
+          <img class="w-6" src="./assets/checkbox.svg" alt="" /><span
+            class="task-completed"
+            >23</span
+          >
         </div>
-        <div class="bg-secondary p-3 rounded-full">
+        <div
+          class="bg-secondary p-3 rounded-full cursor-pointer color-wheel-btn"
+        >
           <img class="w-8" src="./assets/theme-btn.svg" alt="" />
         </div>
       </div>
@@ -51,7 +58,7 @@
             </div>
             <div>
               <p class="text-sm">Task Assigned</p>
-              <h4 class="text-4xl font-bold">05</h4>
+              <h4 class="text-4xl font-bold task-count">06</h4>
             </div>
           </div>
 
@@ -84,17 +91,14 @@
         <!-- Task List -->
         <div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-            <!-- Task Card -->
-
+            <!-- Task Cards -->
             <!-- ShopEase -->
             <div class="bg-secondary p-5 rounded-lg task-card">
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
                 ShopEase
               </h4>
-              <h3 class="text-xl mb-3">Fix Mobile Button Issue</h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Fix Mobile Button Issue</h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -112,7 +116,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -124,10 +128,8 @@
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
                 CloudSync
               </h4>
-              <h3 class="text-xl mb-3">Add Dark Mode</h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Add Dark Mode</h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -145,7 +147,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -157,10 +159,8 @@
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
                 SwiftPay
               </h4>
-              <h3 class="text-xl mb-3">Optimize Home page </h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Optimize Home page </h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -178,7 +178,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -188,10 +188,8 @@
             <!-- Meta -->
             <div class="bg-secondary p-5 rounded-lg task-card">
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">Meta</h4>
-              <h3 class="text-xl mb-3">Add new emoji 🤲</h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Add new emoji 🤲</h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -209,7 +207,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -221,10 +219,8 @@
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
                 Google LLC
               </h4>
-              <h3 class="text-xl mb-3">Integrate OpenAI API</h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Integrate OpenAI API</h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -242,7 +238,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -254,10 +250,8 @@
               <h4 class="bg-primary py-2 px-4 w-fit rounded-lg mb-3">
                 Glassdoar
               </h4>
-              <h3 class="text-xl mb-3">Improve Job searching</h3>
-              <div
-                class="bg-primary p-2 rounded-lg w-64 h-16 mb-3 overflow-hidden"
-              >
+              <h3 class="text-lg mb-3">Improve Job searching</h3>
+              <div class="bg-primary p-2 rounded-lg h-16 mb-3 overflow-hidden">
                 <p
                   class="text-base text-tertiary/70 overflow-hidden text-ellipsis line-clamp-2"
                 >
@@ -275,7 +269,7 @@
                   <h4 class="font-semibold">21 March 2025</h4>
                 </div>
                 <button
-                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn"
+                  class="bg-accent text-primary py-3 px-5 rounded-lg completed-btn disabled:opacity-50 cursor-pointer"
                 >
                   Completed
                 </button>
@@ -284,7 +278,27 @@
           </div>
         </div>
       </section>
-      <section class="col-span-2 bg-primary p-5 rounded-lg"></section>
+      <section
+        class="col-span-2 bg-primary p-5 rounded-lg flex flex-col items-center py-8"
+      >
+        <div class="flex flex-col items-center gap-5">
+          <div class="flex items-center gap-5 w-full">
+            <img src="./assets/activity.svg" alt="" />
+            <h3 class="text-xl text-tertiary">Activity Log</h3>
+          </div>
+          <button
+            class="bg-accent text-primary py-3 px-5 rounded-lg clear-history-btn cursor-pointer"
+          >
+            Clear History
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="my-4 border-b border-[#3752FD]/20 border-dashed"></div>
+
+        <!-- Activities -->
+        <div class="flex flex-col items-center gap-5 activity-list"></div>
+      </section>
     </main>
 
     <script src="./assets/js/app.js"></script>
