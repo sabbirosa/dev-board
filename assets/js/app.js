@@ -3,6 +3,11 @@ const clearHistoryButton = document.querySelector('.clear-history-btn');
 const colorWheelButton = document.querySelector('.color-wheel-btn');
 const taskCount = document.querySelector('.task-count');
 const taskCompleted = document.querySelector('.task-completed');
+const day = document.querySelector('.day');
+const date = document.querySelector('.date');
+
+day.textContent = new Date().toDateString().slice(0, 3);
+date.textContent = new Date().toDateString().slice(4);
 
 clearHistoryButton.addEventListener('click', clearHistory);
 colorWheelButton.addEventListener('click', changeColor);
@@ -24,6 +29,13 @@ completedButtons.forEach(button => {
     const taskCard = this.closest('.task-card');
     const taskTitle = taskCard.querySelector('h3').textContent;
     addActivity(taskTitle);
+
+    console.log(taskCountNumber);
+
+    if (taskCountNumber === 1) {
+        alert('Congratulations! You have completed all the tasks');
+        return
+    }
 
   });
 });
@@ -59,5 +71,6 @@ function clearHistory() {
 }
 
 function changeColor() {
-    console.log('Change color');
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = `#${randomColor}`;
 }
