@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Dev Board</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-accent: #3752fd;
+        --color-primary: #ffffff;
+        --color-secondary: #f4f7ff;
+        --color-tertiary: #00303c;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/7166c8c0eb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="primary-font text-tertiary bg-secondary p-6 px-10 lg:max-w-9xl lg:mx-auto"
+  >
+    <header class="flex justify-between items-center p-5 bg-primary rounded-lg">
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo.svg" alt="Site Icon" />
+        <h1 class="hidden md:block text-4xl font-light">
+          Dev<span class="font-bold">Board</span>
+        </h1>
+      </div>
+      <button
+        class="bg-accent text-primary py-3 px-5 rounded-lg clear-history-btn cursor-pointer"
+      >
+        <a href="./index.html">Back to Desk</a>
+      </button>
+    </header>
+    <main>
+      <h2 class="text-2xl font-bold w-full mx-auto text-center py-4">Blogs</h2>
+
+      <section class="grid grid-cols-1 gap-6">
+        <article class="bg-primary text-tertiary p-6 rounded-lg">
+          <h3 class="text-xl font-bold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h3>
+          <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
+          <p class="text-sm text-tertiary"></p>
+        </article>
+
+        <article class="bg-primary text-tertiary p-6 rounded-lg">
+          <h3 class="text-xl font-bold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent?
+          </h3>
+          <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
+          <p class="text-sm text-tertiary"></p>
+        </article>
+
+        <article class="bg-primary text-tertiary p-6 rounded-lg">
+          <h3 class="text-xl font-bold">
+            Question-3: What is event delegation in the DOM?
+          </h3>
+          <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
+          <p class="text-sm text-tertiary"></p>
+        </article>
+
+        <article class="bg-primary text-tertiary p-6 rounded-lg">
+          <h3 class="text-xl font-bold">
+            Question-4: What is event bubbling in the DOM?
+          </h3>
+          <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
+          <p class="text-sm text-tertiary"></p>
+        </article>
+
+        <article class="bg-primary text-tertiary p-6 rounded-lg">
+          <h3 class="text-xl font-bold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h3>
+          <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
+          <p class="text-sm text-tertiary"></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
