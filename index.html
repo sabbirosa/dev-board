@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-accent: #3752fd;
+        --color-primary: #ffffff;
+        --color-secondary: #f4f7ff;
+        --color-tertiary: #00303c;
+      }
+    </style>
     <script
       src="https://kit.fontawesome.com/7166c8c0eb.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="primary-font"></body>
+  <body class="primary-font text-tertiary bg-red-100 p-4">
+    <header class="flex justify-between items-center p-5 bg-primary rounded-lg">
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo.png" alt="Site Icon" />
+        <h1 class="hidden md:block text-4xl font-light">
+          Dev<span class="font-bold">Board</span>
+        </h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <div
+          class="flex bg-secondary p-3 rounded-full items-center gap-2 text-xl font-bold"
+        >
+          <img src="./assets/checkbox.svg" alt="" />23
+        </div>
+        <div class="bg-secondary p-3 rounded-full">
+          <img src="./assets/theme-btn.svg" alt="" />
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
