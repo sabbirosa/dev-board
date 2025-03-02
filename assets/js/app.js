@@ -1,4 +1,4 @@
-const completedButtons = document.querySelectorAll('.completed-btn');
+const taskContainer = document.getElementById('task-container');
 const clearHistoryButton = document.querySelector('.clear-history-btn');
 const colorWheelButton = document.querySelector('.color-wheel-btn');
 const taskCount = document.querySelector('.task-count');
@@ -12,9 +12,13 @@ date.textContent = new Date().toDateString().slice(4);
 clearHistoryButton.addEventListener('click', clearHistory);
 colorWheelButton.addEventListener('click', changeColor);
 
-completedButtons.forEach(button => {
-  button.addEventListener('click', function() {
 
+taskContainer.addEventListener('click', function(event) {
+
+  const completedButton = event.target.closest('.completed-btn');
+  
+  if (completedButton && !completedButton.disabled) {
+    
     alert('Board updated Successfully');
 
     const taskCountNumber = parseInt(taskCount.textContent);
@@ -23,21 +27,17 @@ completedButtons.forEach(button => {
     taskCount.textContent = taskCountNumber - 1 < 10 ? `0${taskCountNumber - 1}` : taskCountNumber - 1;
     taskCompleted.textContent = completedCountNumber + 1;
 
-    const button = this;
-    button.disabled = true;
+    completedButton.disabled = true;
 
-    const taskCard = this.closest('.task-card');
+    const taskCard = completedButton.closest('.task-card');
     const taskTitle = taskCard.querySelector('h3').textContent;
+    
     addActivity(taskTitle);
 
-    console.log(taskCountNumber);
-
     if (taskCountNumber === 1) {
-        alert('Congratulations! You have completed all the tasks');
-        return
+      alert('Congratulations! You have completed all the tasks');
     }
-
-  });
+  }
 });
 
 function getCurrentTime() {

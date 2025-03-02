@@ -46,7 +46,34 @@
             DOM?
           </h3>
           <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
-          <p class="text-sm text-tertiary"></p>
+          <p class="text-sm text-tertiary">
+            Selecting elements is the first step in manipulating a webpage with
+            JavaScript. The DOM (Document Object Model) provides several methods
+            to find and select elements based on different criteria. Here are
+            the main ways to select elements:
+          </p>
+
+          <pre>
+              <code>
+                // Select by ID which returns a single element
+                const header = document.getElementById('header');
+                
+                // Select by class name which returns a HTML Collection
+                const paragraphs = document.getElementsByClassName('paragraph');
+                
+                // Select by tag name which returns a HTML Collection
+                const divs = document.getElementsByTagName('div');
+                
+                // Select using CSS selectors
+                const firstButton = document.querySelector('.btn');       // Returns first matching element
+                const allButtons = document.querySelectorAll('.btn');     // Returns a List of all matching elements
+              </code>
+          </pre>
+          <p>
+            I find querySelector and querySelectorAll to be the most flexible
+            options since they accept any valid CSS selectors like tag,
+            classname even element.
+          </p>
         </article>
 
         <article class="bg-primary text-tertiary p-6 rounded-lg">
@@ -55,7 +82,32 @@
             textContent?
           </h3>
           <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
-          <p class="text-sm text-tertiary"></p>
+          <p class="text-sm text-tertiary">
+            When working with text content in the DOM, JavaScript gives us three
+            similar looking properties those are innerHTML, innerText, and
+            textContent. Though they might seem interchangeable at first but
+            they each have unique behaviors which can be useful for different
+            situations.
+          </p>
+          <ul>
+            <li>
+              <b>innerHTML: </b>Returns the complete HTML inside the element,
+              including all tags. It can also be used to change the content of
+              an element.
+            </li>
+            <li>
+              <b>innerText: </b>Returns only the visible text content of the
+              node and its descendants. It can also be used to change the
+              content of an element. It ignores hidden elements like display:
+              none.
+            </li>
+            <li>
+              <b>textContent: </b>Returns all text content, including hidden
+              texts. It can also be used to change the content of an element.
+              But it treats HTML tags as plain text when setting content which
+              means it will not render the HTML tags.
+            </li>
+          </ul>
         </article>
 
         <article class="bg-primary text-tertiary p-6 rounded-lg">
