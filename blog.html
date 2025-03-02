@@ -53,7 +53,7 @@
             the main ways to select elements:
           </p>
 
-          <pre>
+          <pre class="text-sm text-tertiary">
               <code>
                 // Select by ID which returns a single element
                 const header = document.getElementById('header');
@@ -69,7 +69,7 @@
                 const allButtons = document.querySelectorAll('.btn');     // Returns a List of all matching elements
               </code>
           </pre>
-          <p>
+          <p class="text-sm text-tertiary">
             I find querySelector and querySelectorAll to be the most flexible
             options since they accept any valid CSS selectors like tag,
             classname even element.
@@ -89,7 +89,7 @@
             they each have unique behaviors which can be useful for different
             situations.
           </p>
-          <ul>
+          <ul class="text-sm text-tertiary list-disc pl-6 my-3 space-y-2">
             <li>
               <b>innerHTML: </b>Returns the complete HTML inside the element,
               including all tags. It can also be used to change the content of
@@ -115,7 +115,37 @@
             Question-3: What is event delegation in the DOM?
           </h3>
           <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
-          <p class="text-sm text-tertiary"></p>
+          <p class="text-sm text-tertiary">
+            Event delegation is a technique where instead of attaching event
+            listeners to individual elements, we attach a single event listener
+            to a parent element. This parent listener then "delegates" the
+            handling of events to the appropriate child elements based on which
+            one triggered the event.
+          </p>
+          <pre class="text-sm text-tertiary">
+            <code>
+              // Without event delegation (attaching listeners to each button)
+              document.querySelectorAll('.button').forEach(button => {
+                button.addEventListener('click', function() {
+                  console.log('Button clicked:', this.textContent);
+                });
+              });
+
+              // With event delegation (single listener on parent)
+              document.querySelector('.task-card').addEventListener('click', function(event) {
+                if (event.target.classList.contains('button')) {
+                  console.log('Button clicked:', event.target.textContent);
+                }
+              });
+            </code>
+        </pre>
+          <p class="text-sm text-tertiary">
+            In assignment I've had used the first approach to attach listeners
+            to each button. But the second approach is more efficient and
+            recommended when working with a large number of elements. But after
+            getting the idea of event delegation with this question I've changed
+            the approach to the second one (event delegation) in my assignment.
+          </p>
         </article>
 
         <article class="bg-primary text-tertiary p-6 rounded-lg">
@@ -123,7 +153,15 @@
             Question-4: What is event bubbling in the DOM?
           </h3>
           <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
-          <p class="text-sm text-tertiary"></p>
+          <p class="text-sm text-tertiary">
+            Event bubbling is the way an event travels up through the DOM
+            hierarchy after it's triggered. When an event occurs on an element
+            (like a click), it first runs the handlers on that element, then on
+            its parent, then all the way up through its ancestors. This bubbling
+            behavior is the default way events work in the DOM. It allows us to
+            listen for events on parent elements and have them be triggered by
+            their children.
+          </p>
         </article>
 
         <article class="bg-primary text-tertiary p-6 rounded-lg">
@@ -132,7 +170,28 @@
             JavaScript?
           </h3>
           <div class="my-3 border-b border-[#3752FD]/20 border-dashed"></div>
-          <p class="text-sm text-tertiary"></p>
+          <p class="text-sm text-tertiary">
+            When we want to create new elements for our webpage using
+            JavaScript, we're essentially crafting pieces of our interface
+            dynamically rather than having them pre-written in HTML.
+          </p>
+          <ul class="text-sm text-tertiary list-disc pl-6 my-3 space-y-2">
+            <li>
+              The first step is creation. We use the createElement() method,
+              which is like getting a blank canvas. But this element is not yet
+              a part of the DOM. It's just a JavaScript object.
+            </li>
+            <li>
+              The next step is to add the element to the DOM. We use the
+              appendChild() method to add the element as a child of another
+              element. This is how we make our element visible on the page.
+            </li>
+            <li>
+              Finally, if we want to remove an element from the DOM, we use the
+              removeChild() method. This method removes a specified child node
+              of the specified element.
+            </li>
+          </ul>
         </article>
       </section>
     </main>
